@@ -1,13 +1,11 @@
 {
-  "name": "@latanda/auth-middleware",
+  "name": "@perks/auth-middleware",
   "version": "1.0.0",
   "description": "Production-ready JWT authentication middleware for Node.js + PostgreSQL + Nginx. Battle-tested with 30+ users at latanda.online",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest",
-    "build": "tsc",
-    "prepare": "npm run build",
     "example": "node examples/basic-usage.js"
   },
   "keywords": [

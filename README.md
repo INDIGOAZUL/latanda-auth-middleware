@@ -1,4 +1,4 @@
-# @latanda/auth-middleware
+# @perks/auth-middleware
 
 **Production-ready JWT authentication middleware for Node.js + PostgreSQL + Nginx**
 
@@ -22,21 +22,21 @@ Battle-tested with 30+ users at [latanda.online](https://latanda.online) ✨
 ### Installation
 
 ```bash
-npm install @latanda/auth-middleware jsonwebtoken bcrypt pg
+npm install @perks/auth-middleware jsonwebtoken bcrypt pg
 ```
 
 ### 1. Set up PostgreSQL
 
 ```bash
 # Run the schema migration
-psql -U your_user -d your_database -f node_modules/@latanda/auth-middleware/sql/schema.sql
+psql -U your_user -d your_database -f node_modules/@perks/auth-middleware/sql/schema.sql
 ```
 
 ### 2. Add to your Express app
 
 ```javascript
 const express = require('express');
-const { createAuthMiddleware, requireRole } = require('@latanda/auth-middleware');
+const { createAuthMiddleware, requireRole } = require('@perks/auth-middleware');
 
 const app = express();
 
@@ -63,7 +63,7 @@ app.listen(3000, () => console.log('Secure API running on port 3000'));
 ### 3. Generate tokens on login
 
 ```javascript
-const { generateToken } = require('@latanda/auth-middleware');
+const { generateToken } = require('@perks/auth-middleware');
 const bcrypt = require('bcrypt');
 
 app.post('/auth/login', async (req, res) => {
@@ -361,6 +361,35 @@ npm test
 
 🔒 **Use bcrypt for passwords** - Never store plain-text passwords
 
+## 💰 Support This Project
+
+If this package saves you time and helps secure your application, consider supporting its development!
+
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-Buy%20me%20a%20coffee-ff5e5b?logo=ko-fi&logoColor=white)](https://ko-fi.com/ebanks)
+[![PayPal](https://img.shields.io/badge/PayPal-Donate-00457C?logo=paypal&logoColor=white)](https://paypal.me/narjell)
+[![Open Collective](https://img.shields.io/badge/Open%20Collective-Support-7fadf2?logo=opencollective&logoColor=white)](https://opencollective.com/latanda-auth-middleware)
+
+**Why support?**
+- ✅ Ongoing maintenance and security updates
+- ✅ New features based on community feedback
+- ✅ Comprehensive documentation and examples
+- ✅ Priority support for sponsors
+
+**Other ways to help:**
+- ⭐ Star this repo on GitHub
+- 🐛 Report bugs and suggest features
+- 📝 Improve documentation
+- 🔀 Submit pull requests
+
+### 💼 Need Help?
+
+**Professional services available:**
+- 📧 Implementation consulting
+- 🔧 Custom feature development
+- 🏢 Enterprise support contracts
+
+Contact: ebanksnigel@gmail.com
+
 ## Contributing
 
 Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md)
@@ -386,4 +415,4 @@ Special thanks to the La Tanda community for battle-testing this authentication 
 
 **Built with ❤️ by the La Tanda team**
 
-[GitHub](https://github.com/INDIGOAZUL/latanda-auth-middleware) • [npm](https://www.npmjs.com/package/@latanda/auth-middleware) • [La Tanda Platform](https://latanda.online)
+[GitHub](https://github.com/INDIGOAZUL/latanda-auth-middleware) • [npm](https://www.npmjs.com/package/@perks/auth-middleware) • [La Tanda Platform](https://latanda.online)
