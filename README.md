@@ -1,5 +1,7 @@
 # @perks/auth-middleware
 
+[![ci](https://github.com/INDIGOAZUL/latanda-auth-middleware/actions/workflows/test.yml/badge.svg)](https://github.com/INDIGOAZUL/latanda-auth-middleware/actions/workflows/test.yml)
+
 **Production-ready JWT authentication middleware for Node.js + PostgreSQL + Nginx**
 
 Battle-tested with 30+ users at [latanda.online](https://latanda.online) ✨
