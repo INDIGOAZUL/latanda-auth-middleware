@@ -1,6 +1,6 @@
 {
-  "name": "@perks/auth-middleware",
-  "version": "1.0.0",
+  "name": "@latanda/auth-middleware",
+  "version": "1.0.1",
   "description": "Production-ready JWT authentication middleware for Node.js + PostgreSQL + Nginx. Battle-tested with 30+ users at latanda.online",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -22,7 +22,7 @@
     "latanda",
     "production-ready"
   ],
-  "author": "Narjell Ebanks <ebanksnigel@example.com>",
+  "author": "Narjell Ebanks <ebanksnigel@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -32,6 +32,9 @@
     "url": "https://github.com/INDIGOAZUL/latanda-auth-middleware/issues"
   },
   "homepage": "https://github.com/INDIGOAZUL/latanda-auth-middleware#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "jsonwebtoken": "^9.0.2",
     "bcrypt": "^5.1.1",

@@ -1,8 +1,26 @@
-# @perks/auth-middleware
+# @latanda/auth-middleware
+
+[![npm version](https://img.shields.io/npm/v/@latanda/auth-middleware.svg)](https://www.npmjs.com/package/@latanda/auth-middleware)
+[![npm downloads](https://img.shields.io/npm/dm/@latanda/auth-middleware.svg)](https://www.npmjs.com/package/@latanda/auth-middleware)
+[![license](https://img.shields.io/npm/l/@latanda/auth-middleware.svg)](https://github.com/INDIGOAZUL/latanda-auth-middleware/blob/main/LICENSE)
+[![node](https://img.shields.io/node/v/@latanda/auth-middleware.svg)](https://nodejs.org)
 
 **Production-ready JWT authentication middleware for Node.js + PostgreSQL + Nginx**
 
 Battle-tested with 30+ users at [latanda.online](https://latanda.online) ✨
+
+## Migration from @perks/auth-middleware
+
+This package was previously published as `@perks/auth-middleware`. The scope was renamed to `@latanda` in v1.0.1 to align with the La Tanda project brand. The API is unchanged — only the package name and import path differ. See [MIGRATION.md](MIGRATION.md) for full details.
+
+```bash
+npm uninstall @perks/auth-middleware && npm install @latanda/auth-middleware
+```
+
+```js
+// Before:  const auth = require('@perks/auth-middleware');
+// After:   const auth = require('@latanda/auth-middleware');
+```
 
 ## Features
 
@@ -22,21 +40,21 @@ Battle-tested with 30+ users at [latanda.online](https://latanda.online) ✨
 ### Installation
 
 ```bash
-npm install @perks/auth-middleware jsonwebtoken bcrypt pg
+npm install @latanda/auth-middleware jsonwebtoken bcrypt pg
 ```
 
 ### 1. Set up PostgreSQL
 
 ```bash
 # Run the schema migration
-psql -U your_user -d your_database -f node_modules/@perks/auth-middleware/sql/schema.sql
+psql -U your_user -d your_database -f node_modules/@latanda/auth-middleware/sql/schema.sql
 ```
 
 ### 2. Add to your Express app
 
 ```javascript
 const express = require('express');
-const { createAuthMiddleware, requireRole } = require('@perks/auth-middleware');
+const { createAuthMiddleware, requireRole } = require('@latanda/auth-middleware');
 
 const app = express();
 
@@ -63,7 +81,7 @@ app.listen(3000, () => console.log('Secure API running on port 3000'));
 ### 3. Generate tokens on login
 
 ```javascript
-const { generateToken } = require('@perks/auth-middleware');
+const { generateToken } = require('@latanda/auth-middleware');
 const bcrypt = require('bcrypt');
 
 app.post('/auth/login', async (req, res) => {
@@ -415,4 +433,4 @@ Special thanks to the La Tanda community for battle-testing this authentication 
 
 **Built with ❤️ by the La Tanda team**
 
-[GitHub](https://github.com/INDIGOAZUL/latanda-auth-middleware) • [npm](https://www.npmjs.com/package/@perks/auth-middleware) • [La Tanda Platform](https://latanda.online)
+[GitHub](https://github.com/INDIGOAZUL/latanda-auth-middleware) • [npm](https://www.npmjs.com/package/@latanda/auth-middleware) • [La Tanda Platform](https://latanda.online)
