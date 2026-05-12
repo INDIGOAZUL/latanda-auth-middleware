@@ -2,8 +2,16 @@
   "name": "@latanda/auth-middleware",
   "version": "1.0.1",
   "description": "Production-ready JWT authentication middleware for Node.js + PostgreSQL + Nginx. Battle-tested with 30+ users at latanda.online",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "sql",
+    "examples",
+    "README.md",
+    "CHANGELOG.md",
+    "MIGRATION.md",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "jest",
     "example": "node examples/basic-usage.js"
