@@ -1,0 +1,14 @@
+name: Deprecate @perks/auth-middleware
+on:
+  workflow_dispatch:
+jobs:
+  deprecate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm deprecate "@perks/auth-middleware@1.0.0" "Moved to @latanda/auth-middleware. Run: npm install @latanda/auth-middleware. See MIGRATION.md."
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_2 }}
