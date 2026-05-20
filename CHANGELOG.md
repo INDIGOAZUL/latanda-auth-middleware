@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.4] - 2026-05-20
+
+### Changed
+- **Deps:** Batched Dependabot updates — bcrypt 6.0, jest 30, typescript 6.0, @types/* major bumps, actions/checkout@v6, actions/setup-node@v6. Smoke-tested publish workflow with setup-node@v6 + Trusted Publishing OIDC.
+
+
 ## 1.0.3 - 2026-05-20
 
 ### Fixed
