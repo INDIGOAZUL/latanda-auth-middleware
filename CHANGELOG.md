@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.2 - 2026-05-20
+
+### Changed
+- **CI:** Migrated publish workflow to npm Trusted Publishing (OIDC). Removes dependency on long-lived `NPM_TOKEN_2` secret. No API changes.
+- **CI:** Retired `deprecate-perks.yml` workflow; `@perks/auth-middleware` deprecation handled via interactive `npm deprecate` instead.
+
+
 ## 1.0.1 - 2026-05-12
 
 - Renamed scope: `@perks/auth-middleware` → `@latanda/auth-middleware`. The old package is deprecated with a redirect message.
