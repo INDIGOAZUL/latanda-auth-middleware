@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.3 - 2026-05-20
+
+### Fixed
+- **CI:** Upgrade npm CLI to >=11.5.1 in publish workflow so Trusted Publishing OIDC token-exchange completes. Without this, publish step fails with E404 (npm CLI v10.x ships with Node 20 and does not know about OIDC token exchange). v1.0.2 tag/release exist but were never published to npm registry due to this.
+
+
 ## 1.0.2 - 2026-05-20
 
 ### Changed
